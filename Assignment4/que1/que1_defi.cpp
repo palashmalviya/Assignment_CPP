@@ -57,13 +57,16 @@ using namespace std;
             
         switch(type)
             {
-                case SAVING : cout<<"\n\tAccount Type : "<<account_type::SAVING;
+                //case SAVING : cout<<"\n\tAccount Type : "<<account_type::SAVING;
+                case SAVING : cout<<"\n\tAccount Type : SAVING";
                 break;
 
-                case CURRENT : cout<<"\n\tAccount Type : "<<account_type::CURRENT;
+                //case CURRENT : cout<<"\n\tAccount Type : "<<account_type::CURRENT;
+                case CURRENT : cout<<"\n\tAccount Type : CURRENT";
                 break;
 
-                case DEMAT : cout<<"\n\tAccount Type : "<<account_type::DEMAT;
+                //case DEMAT : cout<<"\n\tAccount Type : "<<account_type::DEMAT;
+                case DEMAT : cout<<"\n\tAccount Type : DEMAT";
                 break;
             }
         if(this->balance<1)
