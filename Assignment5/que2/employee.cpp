@@ -9,10 +9,11 @@ using namespace std;
 
 employee::employee()
 { 
-    date dmy;
-    this->set_name("DEFAULT");
-    this->set_addr("DEFAULT");
-    this->set_birth_date(dmy);
+    // date dmy;
+    // this->set_name("DEFAULT");
+    // this->set_addr("DEFAULT");
+    // this->set_birth_date(dmy);
+    person();
     this->id=0;
     this->sal=0.0;
     this->dept[40]=NULL;
@@ -24,9 +25,10 @@ employee::employee()
 }
 employee::employee(char* name,char* addr,date birth_date,int id,float sal,char* dept,date joining)
 {
-    this->set_name(name);
-    this->set_addr(addr);
-    this->set_birth_date(birth_date);
+    // this->set_name(name);
+    // this->set_addr(addr);
+    // this->set_birth_date(birth_date);
+    person(name,addr,birth_date);
     this->id=id;
     this->sal=sal;
     strcpy(this->dept,dept);
@@ -96,32 +98,34 @@ employee::employee(char* name,char* addr,date birth_date,int id,float sal,char* 
         dmy=get_birth_date();
         cout<<"\n\n\tEmployees Details ";
         cout<<"\n--------------------------------------";
-        cout<<"\n\tEmployee Name : "<<name;
-        cout<<"\n\tEmployee Address : "<<addr;
-        cout<<"\n\tEmployee BirthDate ";dmy.display();
-        cout<<"\n\tEmployee ID : "<<this->id;
+        // cout<<"\n\tEmployee Name : "<<name;
+        // cout<<"\n\tEmployee Address : "<<addr;
+        // cout<<"\n\tEmployee BirthDate ";dmy.display();
+        person::display();
+        cout<<"\tEmployee ID : "<<this->id;
         cout<<"\n\tEmployee Sal : "<<this->sal;
         cout<<"\n\tEmployee Deaprtment : "<<this->dept;
-        cout<<"\n\tJoining  ";this->joining.display();
+        cout<<"\tJoining Date  ";this->joining.display();
 
     }
 
     void employee::accept()
     {
-        char *name=new char[30],*addr=new char[100];
-        date dmy; 
+        // char *name=new char[30],*addr=new char[100];
+        // date dmy; 
         char *dept=new char[30];
         cout<<"\n\n\tEnter Employee Details ";
         cout<<"\n--------------------------------------";
-        cout<<"\nEnter Employee Name : ";
-        cin>>name;
-        set_name(name);
-        cout<<"\nEnter Employee Address : ";
-        cin>>addr;
-        set_addr(addr);
-        cout<<"\nEnter Employee BirthDay : ";
-        dmy.accept();
-        cout<<"\nEnter Employee ID : ";
+        // cout<<"\nEnter Employee Name : ";
+        // cin>>name;
+        // set_name(name);
+        // cout<<"\nEnter Employee Address : ";
+        // cin>>addr;
+        // set_addr(addr);
+        // cout<<"\nEnter Employee BirthDay : ";
+        // dmy.accept();
+        person::accept();
+        cout<<"Enter Employee ID : ";
         cin>>this->id;
         cout<<"\nEnter Employee Sal : ";
         cin>>this->sal;
